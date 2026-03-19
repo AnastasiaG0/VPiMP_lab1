@@ -9,7 +9,14 @@ docker-compose up -d
 docker-compose logs -f
 
 # Открыть новый терминал PowerShell и выполнить
+# Для проверки доступности сервера и навигации по API
+curl http://localhost:4200/
+
+# Для вычисления количества дней до наступления следующего Нового года
 curl http://localhost:4200/info
+
+# Для проверки состояния сервера
+curl http://localhost:4200/health
 
 # Остановить контейнер
 docker-compose down
