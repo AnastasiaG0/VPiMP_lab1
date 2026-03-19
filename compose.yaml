@@ -1,0 +1,13 @@
+services:
+  vpimplab1:
+    image: vpimplab1
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 4200:4200
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+      - PYTHONDONTWRITEBYTECODE=1
